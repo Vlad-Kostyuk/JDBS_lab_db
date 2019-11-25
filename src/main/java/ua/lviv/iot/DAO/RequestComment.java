@@ -83,11 +83,11 @@ public class RequestComment {
         return delete;
     }
     
-    public static void deleteChildren(int id_comment) throws SQLException {
+    public static void deleteChildren(int commentId) throws SQLException {
       Connection conn = ConnectionManager.getConnection();
-  	  String DELETE = "DELETE FROM preference_comment WHERE id_comment=?";
-  	  try (PreparedStatement ps = conn.prepareStatement(DELETE)) {
-	            ps.setInt(1, id_comment);
+  	  String delete = "DELETE FROM preference_comment WHERE id_comment=?";
+  	  try (PreparedStatement ps = conn.prepareStatement(delete)) {
+	            ps.setInt(1, commentId);
 	            ps.executeUpdate();
 	        }catch (SQLException e) {
 	            System.out.println("Сталася помилка під час запиту(DELETE Children) до бази даних: \n" + e);

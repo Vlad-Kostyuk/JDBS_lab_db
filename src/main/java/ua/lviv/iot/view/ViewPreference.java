@@ -4,8 +4,6 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
-
-import ua.lviv.iot.DAO.RequestPreference;
 import ua.lviv.iot.controller.Controller;
 import ua.lviv.iot.model.Preference;
 
@@ -72,12 +70,12 @@ public class ViewPreference {
 	public static void deleteInfo() throws SQLException {
 			 System.out.print("id_user: ");
 			 Scanner scanUpdate = new Scanner(System.in);
-		     int id_user = scanUpdate.nextInt(); 
+		     int userId = scanUpdate.nextInt(); 
 				 if(true) {
 					 System.out.print("id_post: ");
 					 Scanner scan = new Scanner(System.in);
-				     int id_post = scanUpdate.nextInt();
-				     System.out.print(controller.deletePreference(id_user,id_post));	
+				     int postId = scanUpdate.nextInt();
+				     System.out.print(controller.deletePreference(userId,postId));	
 				 }
 	}
 	
@@ -105,10 +103,9 @@ public class ViewPreference {
 				 if(true) {
 					 System.out.print("id_post: ");
 					 Scanner scan = new Scanner(System.in);
-				     int id_post = scanUpdate.nextInt();
-				     System.out.print(controller.updatePreference(preference,userId,id_post));	
+				     int postId = scanUpdate.nextInt();
+				     System.out.print(controller.updatePreference(preference,userId,postId));	
 				 }
 		 }
 	}
 }
-

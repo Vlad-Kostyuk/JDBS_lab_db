@@ -77,8 +77,8 @@ public class ViewUser {
 	public static void deleteInfo() throws SQLException {
 			System.out.print("id_user: ");
 			Scanner scan = new Scanner(System.in);
-			int id_type_post = scan.nextInt();
-		    System.out.print(controller.deleteUser(id_type_post));	
+			int userId = scan.nextInt();
+		    System.out.print(controller.deleteUser(userId));	
 	}
 	
 	public static void updateInfo() throws SQLException {
@@ -107,8 +107,8 @@ public class ViewUser {
 		 } if(true) {
 			 System.out.print("id_user: ");
 			 Scanner scan = new Scanner(System.in);
-			 int id_user = scan.nextInt();
-			 System.out.print(controller.updateUser(user,id_user));	
+			 int userId = scan.nextInt();
+			 System.out.print(controller.updateUser(user,userId));	
 		 }
 	}
 }

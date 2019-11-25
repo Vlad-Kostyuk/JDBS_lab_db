@@ -59,7 +59,7 @@ public class RequestFotoAndVideo {
 	    	String update = "запит(UPDATE) пройшов успішно";
 	    	Connection connection = ConnectionManager.getConnection();
 	    	try (PreparedStatement ps = connection.prepareStatement(UPDATE)) {
-	             ps.setInt(1, fotoAndVideo.getIdFotoOrVideo());
+	             ps.setInt(1,fotoAndVideo.getIdFotoOrVideo());
 	             ps.setInt(2,fotoAndVideo.getPostId());
 	             ps.setInt(3,fotoAndVideo.getMediaTypeId());
 	             ps.setString(4,fotoAndVideo.getFormat());
@@ -72,11 +72,11 @@ public class RequestFotoAndVideo {
 			return update;
 	    }
 	    
-	    public static String delete(int id_foto_or_video) throws SQLException {
+	    public static String delete(int fotoOrVideoId) throws SQLException {
 	    	String delete = "запит(DELETE) пройшов успішно";
 	        Connection conn = ConnectionManager.getConnection();
 	        try (PreparedStatement ps = conn.prepareStatement(DELETE)) {
-	            ps.setInt(1,id_foto_or_video);
+	            ps.setInt(1, fotoOrVideoId);
 	            ps.executeUpdate();
 	        }catch (SQLException e) {
 	            System.out.println("Сталася помилка під час запиту(DELETE) до бази даних: \n" + e);

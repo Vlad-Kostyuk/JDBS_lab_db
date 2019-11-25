@@ -79,4 +79,3 @@ public class RequestPreference {
 	        return delete;
 	    }
 	}
-

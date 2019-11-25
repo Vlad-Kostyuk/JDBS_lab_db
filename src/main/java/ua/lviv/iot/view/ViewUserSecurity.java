@@ -8,7 +8,6 @@ import ua.lviv.iot.DAO.RequestUserSecurity;
 import ua.lviv.iot.controller.Controller;
 import ua.lviv.iot.model.UserSecurity;
 
-
 public class ViewUserSecurity {
 
 	private static Controller controller  = new Controller();
@@ -72,8 +71,8 @@ public class ViewUserSecurity {
 	public static void deleteInfo() throws SQLException {
 			System.out.print("user_id: ");
 			Scanner scan = new Scanner(System.in);
-			int user_id = scan.nextInt();
-		    System.out.print(controller.deleteUserSecurity(user_id));	
+			int userId = scan.nextInt();
+		    System.out.print(controller.deleteUserSecurity(userId));	
 	}
 	
 	public static void updateInfo() throws SQLException {
@@ -96,8 +95,8 @@ public class ViewUserSecurity {
 		 } if(true) {
 			 System.out.print("user_id: ");
 			 Scanner scan = new Scanner(System.in);
-			 int user_id = scan.nextInt();
-			 System.out.print(controller.updateUserSecurity(userSecurity,user_id));	
+			 int userId = scan.nextInt();
+			 System.out.print(controller.updateUserSecurity(userSecurity,userId));	
 		 }
 	}
 }

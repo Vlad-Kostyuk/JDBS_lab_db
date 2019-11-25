@@ -1,13 +1,8 @@
 package ua.lviv.iot.view;
 
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Scanner;
-import ua.lviv.iot.DAO.RequestBlackList;
-import ua.lviv.iot.DAO.RequestMediaType;
 import ua.lviv.iot.controller.Controller;
-import ua.lviv.iot.model.BlackList;
 import ua.lviv.iot.model.MediaType;
 
 public class ViewMediaType {
@@ -93,4 +88,3 @@ public class ViewMediaType {
 		 }
 	}
 }
-

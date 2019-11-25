@@ -76,8 +76,8 @@ public class RequestMediaType {
     
     public static void deleteChildren(int mediaTypeId) throws SQLException {
   	  Connection conn = ConnectionManager.getConnection();
-  	  String DELETE = "DELETE FROM foto_and_video WHERE id_media_type=?";
-  	  try (PreparedStatement ps = conn.prepareStatement(DELETE)) {
+  	  String delete = "DELETE FROM foto_and_video WHERE id_media_type=?";
+  	  try (PreparedStatement ps = conn.prepareStatement(delete)) {
 	            ps.setInt(1, mediaTypeId);
 	            ps.executeUpdate();
 	        }catch (SQLException e) {

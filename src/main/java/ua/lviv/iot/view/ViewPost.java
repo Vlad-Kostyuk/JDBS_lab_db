@@ -2,10 +2,8 @@ package ua.lviv.iot.view;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import ua.lviv.iot.DAO.RequestFotoAndVideo;
 import ua.lviv.iot.DAO.RequestPost;
 import ua.lviv.iot.controller.Controller;
-import ua.lviv.iot.model.FotoAndVideo;
 import ua.lviv.iot.model.Post;
 
 public class ViewPost {
@@ -122,6 +120,3 @@ public class ViewPost {
 		 }
 	}
 }
-
-
-

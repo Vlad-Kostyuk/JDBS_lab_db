@@ -2,7 +2,6 @@ package ua.lviv.iot.view;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import ua.lviv.iot.DAO.RequestTypePost;
 import ua.lviv.iot.controller.Controller;
 import ua.lviv.iot.model.TypePost;
 
@@ -64,8 +63,8 @@ public class ViewTypePost {
 	public static void deleteInfo() throws SQLException {
 			System.out.print("id_type_post: ");
 			Scanner scan = new Scanner(System.in);
-			int id_type_post = scan.nextInt();
-		    System.out.print(controller.deleteTypePost(id_type_post));	
+			int typePostId = scan.nextInt();
+		    System.out.print(controller.deleteTypePost(typePostId));	
 	}
 	
 	public static void updateInfo() throws SQLException {
@@ -84,8 +83,8 @@ public class ViewTypePost {
 		 if(true) {
 			 System.out.print("id_type_post: ");
 			 Scanner scan = new Scanner(System.in);
-			 int id_type_post = scan.nextInt();
-			 System.out.print(controller.updateTypePost(typePost,id_type_post));	
+			 int typePostId = scan.nextInt();
+			 System.out.print(controller.updateTypePost(typePost,typePostId));	
 		 }
 	}
 }

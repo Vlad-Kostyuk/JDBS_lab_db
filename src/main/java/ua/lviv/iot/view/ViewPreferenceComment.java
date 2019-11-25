@@ -68,8 +68,8 @@ public class ViewPreferenceComment {
 	public static void deleteInfo() throws SQLException {
 			 System.out.print("id_comment: ");
 			 Scanner scan = new Scanner(System.in);
-			 int id_comment = scan.nextInt();
-			 System.out.print(controller.deletePreferenceComment(id_comment));	
+			 int commentId = scan.nextInt();
+			 System.out.print(controller.deletePreferenceComment(commentId));	
 	  
 	}
 	
@@ -89,11 +89,9 @@ public class ViewPreferenceComment {
 		 if(true) {
 			 System.out.print("id_post: ");
 			 Scanner scan = new Scanner(System.in);
-			 int id_comment = scan.nextInt();
-			 System.out.print(controller.updatePreferenceComment(preferenceComment,id_comment));	
+			 int commentId = scan.nextInt();
+			 System.out.print(controller.updatePreferenceComment(preferenceComment,commentId));	
 			
 		 }
 	}
 }
-
-

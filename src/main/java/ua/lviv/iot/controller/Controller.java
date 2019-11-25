@@ -27,7 +27,6 @@ import ua.lviv.iot.model.User;
 import ua.lviv.iot.model.UserLog;
 import ua.lviv.iot.model.UserSecurity;
 
-
 public class Controller implements IController {
     
 	public Controller() {
@@ -45,14 +44,14 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateBlackList(BlackList blackList, int user_id, int locking_user_id) throws SQLException {
-		return RequestBlackList.update(blackList, user_id, locking_user_id);
+	public String updateBlackList(BlackList blackList, int userId, int lockingUserId) throws SQLException {
+		return RequestBlackList.update(blackList, userId, lockingUserId);
 		
 	}
 
 	@Override
-	public String deleteBlackList(int user_id, int locking_user_id) throws SQLException {
-		return RequestBlackList.delete(user_id, locking_user_id);
+	public String deleteBlackList(int userId, int lockingUserId) throws SQLException {
+		return RequestBlackList.delete(userId, lockingUserId);
 		
 	}
 
@@ -68,14 +67,14 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateComment(Comment ñomment, int id_comment) throws SQLException {
-		return RequestComment.update(ñomment, id_comment);
+	public String updateComment(Comment ñomment, int commentId) throws SQLException {
+		return RequestComment.update(ñomment, commentId);
 		
 	}
 
 	@Override
-	public String deleteComment(int id_comment) throws SQLException {
-		return RequestComment.delete(id_comment);	
+	public String deleteComment(int commentId) throws SQLException {
+		return RequestComment.delete(commentId);	
 	}
 
 	@Override
@@ -89,13 +88,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateFotoAndVideo(FotoAndVideo fotoAndVideo, int id_foto_or_video) throws SQLException {
-		return RequestFotoAndVideo.update(fotoAndVideo, id_foto_or_video);	
+	public String updateFotoAndVideo(FotoAndVideo fotoAndVideo, int fotoOrVideoId) throws SQLException {
+		return RequestFotoAndVideo.update(fotoAndVideo, fotoOrVideoId);	
 	}
 
 	@Override
-	public String deleteFotoAndVideo(int id_foto_or_video) throws SQLException {
-		return RequestFotoAndVideo.delete(id_foto_or_video);
+	public String deleteFotoAndVideo(int fotoOrVideoId) throws SQLException {
+		return RequestFotoAndVideo.delete(fotoOrVideoId);
 	}
 
 	@Override
@@ -109,13 +108,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateMediaType(MediaType mediaType, int id_media_type) throws SQLException {
-		return RequestMediaType.update(mediaType, id_media_type);
+	public String updateMediaType(MediaType mediaType, int mediaTypeId) throws SQLException {
+		return RequestMediaType.update(mediaType, mediaTypeId);
 	}
 
 	@Override
-	public String deleteMediaType(int id_media_type) throws SQLException {
-		return RequestMediaType.delete(id_media_type);
+	public String deleteMediaType(int mediaTypeId) throws SQLException {
+		return RequestMediaType.delete(mediaTypeId);
 	}
 
 	@Override
@@ -149,13 +148,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updatePreference(Preference preference, int id_user, int id_post) throws SQLException {
-		return RequestPreference.update(preference, id_user, id_post);
+	public String updatePreference(Preference preference, int userId, int postId) throws SQLException {
+		return RequestPreference.update(preference, userId, postId);
 	}
 
 	@Override
-	public String deletePreference(int id_user, int id_post) throws SQLException {
-		return RequestPreference.delete(id_user, id_post);	
+	public String deletePreference(int userId, int postId) throws SQLException {
+		return RequestPreference.delete(userId, postId);	
 	}
 
 	@Override
@@ -169,13 +168,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updatePreferenceComment(PreferenceComment preferenceComment, int id_comment) throws SQLException {
-		return RequestPreferenceComment.update(preferenceComment, id_comment);
+	public String updatePreferenceComment(PreferenceComment preferenceComment, int commentId) throws SQLException {
+		return RequestPreferenceComment.update(preferenceComment, commentId);
 	}
 
 	@Override
-	public String deletePreferenceComment(int id_comment) throws SQLException {
-		return RequestPreferenceComment.delete(id_comment);
+	public String deletePreferenceComment(int commentId) throws SQLException {
+		return RequestPreferenceComment.delete(commentId);
 	}
 
 	@Override
@@ -189,13 +188,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateTag(Tag tag, int id_user, int id_post) throws SQLException {
-		return RequestTag.update(tag, id_user, id_post);
+	public String updateTag(Tag tag, int userId, int postId) throws SQLException {
+		return RequestTag.update(tag, userId, postId);
 	}
 
 	@Override
-	public String deleteTag(int id_user, int id_post) throws SQLException {
-		return RequestTag.delete(id_user, id_post);
+	public String deleteTag(int userId, int postId) throws SQLException {
+		return RequestTag.delete(userId, postId);
 	}
 
 	@Override
@@ -209,13 +208,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateTypePost(TypePost typePost, int id_type_post) throws SQLException {
-		return RequestTypePost.update(typePost, id_type_post);
+	public String updateTypePost(TypePost typePost, int typePostId) throws SQLException {
+		return RequestTypePost.update(typePost, typePostId);
 	}
 
 	@Override
-	public String deleteTypePost(int id_type_post) throws SQLException {
-		return RequestTypePost.delete(id_type_post);
+	public String deleteTypePost(int typePostId) throws SQLException {
+		return RequestTypePost.delete(typePostId);
 	}
 
 	@Override
@@ -229,13 +228,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateUser(User user, int id_user) throws SQLException {
-		return RequestUser.update(user, id_user);
+	public String updateUser(User user, int userId) throws SQLException {
+		return RequestUser.update(user, userId);
 	}
 
 	@Override
-	public String deleteUser(int id_user) throws SQLException {
-		return RequestUser.delete(id_user);
+	public String deleteUser(int userId) throws SQLException {
+		return RequestUser.delete(userId);
 	}
 
 	@Override
@@ -249,13 +248,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateUserLog(UserLog userLog, int user_id) throws SQLException {
-		return RequestUserLog.update(userLog, user_id);
+	public String updateUserLog(UserLog userLog, int userId) throws SQLException {
+		return RequestUserLog.update(userLog, userId);
 	}
 
 	@Override
-	public String deleteUserLog(int user_id) throws SQLException {
-		return RequestUserLog.delete(user_id);
+	public String deleteUserLog(int userId) throws SQLException {
+		return RequestUserLog.delete(userId);
 	}
 
 	@Override
@@ -269,13 +268,13 @@ public class Controller implements IController {
 	}
 
 	@Override
-	public String updateUserSecurity(UserSecurity userSecurity, int user_id) throws SQLException {
-		return RequestUserSecurity.update(userSecurity, user_id);
+	public String updateUserSecurity(UserSecurity userSecurity, int userId) throws SQLException {
+		return RequestUserSecurity.update(userSecurity, userId);
 	}
 
 	@Override
-	public String deleteUserSecurity(int user_id) throws SQLException {
-		return RequestUserSecurity.delete(user_id);
+	public String deleteUserSecurity(int userId) throws SQLException {
+		return RequestUserSecurity.delete(userId);
 	}
 }
 	

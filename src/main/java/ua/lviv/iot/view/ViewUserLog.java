@@ -71,8 +71,8 @@ public class ViewUserLog {
 	public static void deleteInfo() throws SQLException {
 			System.out.print("user_id: ");
 			Scanner scan = new Scanner(System.in);
-			int user_id = scan.nextInt();
-		    System.out.print(controller.deleteUserLog(user_id));	
+			int userId = scan.nextInt();
+		    System.out.print(controller.deleteUserLog(userId));	
 	}
 	
 	public static void updateInfo() throws SQLException {
@@ -96,8 +96,8 @@ public class ViewUserLog {
 		 } if(true) {
 			 System.out.print("\n" + "user_id: ");
 			 Scanner scan = new Scanner(System.in);
-			 int user_id = scan.nextInt();
-			 System.out.print(controller.updateUserLog(userLog,user_id));	
+			 int userId = scan.nextInt();
+			 System.out.print(controller.updateUserLog(userLog,userId));	
 		 }
 	}
 }

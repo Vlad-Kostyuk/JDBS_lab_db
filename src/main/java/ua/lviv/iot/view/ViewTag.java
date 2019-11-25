@@ -2,10 +2,8 @@ package ua.lviv.iot.view;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import ua.lviv.iot.DAO.RequestTag;
 import ua.lviv.iot.controller.Controller;
 import ua.lviv.iot.model.Tag;
-
 
 public class ViewTag {
 	
@@ -70,12 +68,12 @@ public class ViewTag {
 	public static void deleteInfo() throws SQLException {
 		 System.out.print("id_user: ");
 		 Scanner scanUpdate = new Scanner(System.in);
-	     int id_user = scanUpdate.nextInt(); 
+	     int userId = scanUpdate.nextInt(); 
 			 if(true) {
 				 System.out.print("id_post: ");
 				 Scanner scan = new Scanner(System.in);
-			     int id_post = scan.nextInt();
-			     System.out.print(controller.deleteTag(id_user,id_post));	
+			     int postId = scan.nextInt();
+			     System.out.print(controller.deleteTag(userId,postId));	
 			 }
 	}
 	
@@ -99,12 +97,12 @@ public class ViewTag {
 		 }
 		 System.out.print("id_user: ");
 		 Scanner scanUpdate = new Scanner(System.in);
-	     int id_user = scanUpdate.nextInt(); 
+	     int userId = scanUpdate.nextInt(); 
 			 if(true) {
 				 System.out.print("id_post: ");
 				 Scanner scan = new Scanner(System.in);
-			     int id_post = scan.nextInt();
-			     System.out.print(controller.updateTag(tag,id_user,id_post));	
+			     int postId = scan.nextInt();
+			     System.out.print(controller.updateTag(tag,userId,postId));	
 			 }
 	}
 }
